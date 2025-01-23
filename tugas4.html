@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ujian Pemrograman Javascript</title>
+</head>
+<body>
+<h2>Masukkan Nilai Ujian Pemrograman Javascript</h2>
+<label for="nilaiUjian">Nilai: </label>
+<input type="number" id="nilaiUjian" name="nilaiUjian">
+<button onclick="cekKelulusan()">Cek Kelulusan</button>
+<p id="result"></p>
+
+<script>
+function cekKelulusan() {
+const nilaiUjian = parseInt(document.getElementById("nilaiUjian").value);
+let pesan = "";
+
+if (nilaiUjian > 75) {
+pesan = "Selamat Anda Lulus";
+} else {
+pesan = "Tidak Lulus, Anda di keluarkan dari sekolah";
+}
+
+document.getElementById("result").innerText = pesan;
+}
+</script>
+</body>
+</html>

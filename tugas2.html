@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kategori Usia</title>
+</head>
+<body>
+<h2>Masukkan Usia kamu</h2>
+<label for="usia">Usia: </label>
+<input type="number" id="usia" name="usia">
+<button onclick="kategoriUsia()">Tentukan Kategori Usia</button>
+<p id="result"></p>
+
+<script>
+function kategoriUsia() {
+const usia = parseInt(document.getElementById("usia").value);
+let kategori = "";
+
+if (usia >= 0 && usia <= 12) {
+kategori = "Anak kecil";
+} else if (usia >= 13 && usia <= 17) {
+kategori = "Anak muda";
+} else if (usia >= 18 && usia <= 59) {
+kategori = "Dewasa";
+} else if (usia >= 60) {
+kategori = "Sudah tua";
+} else {
+kategori = "Usia tidak valid";
+}
+
+document.getElementById("result").innerText = "Kategori Usia: " + kategori;
+}
+</script>
+</body>
+</html>

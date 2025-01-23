@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tahun Masehi atau Kabisat</title>
+</head>
+<body>
+<h2>Masukkan Tahun</h2>
+<label for="tahun">Tahun: </label>
+<input type="number" id="tahun" name="tahun">
+<button onclick="cekTahun()">Cek Tahun</button>
+<p id="result"></p>
+
+<script>
+function cekTahun() {
+const tahun = parseInt(document.getElementById("tahun").value);
+let pesan = "";
+
+if ((tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 400 === 0)) {
+pesan = tahun + " adalah Tahun Kabisat";
+} else {
+pesan = tahun + " adalah Tahun Masehi";   }
+
+document.getElementById("result").innerText = pesan;
+}
+</script>
+</body>
+</html>

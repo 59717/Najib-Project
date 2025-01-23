@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kategori Nilai Pemrograman Dasar</title>
+</head>
+<body>
+<h2>Masukkan Nilai </h2>
+<label for="nilai">Nilai: </label>
+<input type="number" id="nilai" name="nilai">
+<button onclick="kategoriNilai()">Tentukan Kategori</button>
+<p id="result"></p>
+
+<script>
+function kategoriNilai() {
+const nilai = parseInt(document.getElementById("nilai").value);
+let kategori = "";
+
+if (nilai >= 85 && nilai <= 100) {
+kategori = "A";
+} else if (nilai >= 70 && nilai <= 84) {
+kategori = "B";
+} else if (nilai >= 50 && nilai <= 69) {
+kategori = "C";
+} else if (nilai >= 30 && nilai <= 49) {
+kategori = "D";
+} else if (nilai >= 0 && nilai <= 29) {
+kategori = "E";
+} else {
+kategori = "Nilai tidak valid";
+}
+
+document.getElementById("result").innerText = "Kategori Nilai: " + kategori;
+}
+</script>
+</body>
+</html>
