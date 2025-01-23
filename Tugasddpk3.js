@@ -1,11 +1,4 @@
-let jumlahGanjil = 0;
-
-for (let i = 1; i <= 100; i++) {
-if (i % 2 !== 0) {  
-jumlahGanjil += i;
+for (let i = 1; i <= 99; i += 2) {
+    console.log(i);
 }
-}
-
-console.log("Jumlah Bilangan Ganjil dari 1 hingga 100 adalah: " + jumlahGanjil);
-
-//menghitung jumlah Bilangan Ganjil dari 1 hingga 100
+//menampilkan bilangan ganjil dari 1 sampai 99
