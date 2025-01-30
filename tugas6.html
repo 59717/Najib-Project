@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Bulan Islam</title>
+</head>
+<body>
+    <h2>Menampilkan Nama Bulan dalam Kalender Islam</h2>
+    <label for="bulan">Masukkan angka bulan (1-12): </label>
+    <input type="number" id="bulan" min="1" max="12" placeholder="1-12">
+    <button onclick="tampilkanBulan()">Tampilkan Bulan</button>
+    <p id="result_bulan"></p>
+
+    <script>
+        function tampilkanBulan() {
+            let bulan = document.getElementById("bulan").value;
+            let bulanIslam = [
+                "Muharram", "Safar", "Rabi'ul Awwal", "Rabi'ul Akhir",
+                "Jumada'ul Awwal", "Jumada'ul Akhir", "Rajab", "Sya'ban",
+                "Ramadhan", "Shawwal", "Dhul-Qi'dah", "Dhul-Hijjah"
+            ];
+
+            if (bulan >= 1 && bulan <= 12) {
+                document.getElementById("result_bulan").innerText = `Bulan ke-${bulan} dalam kalender Islam adalah ${bulanIslam[bulan - 1]}`;
+            } else {
+                document.getElementById("result_bulan").innerText = "Angka yang Anda masukkan tidak valid. Harap masukkan angka antara 1-12.";
+            }
+        }
+    </script>
+</body>
+</html>
